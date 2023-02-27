@@ -21,7 +21,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
+                <a class="navbar-brand" href="<?php echo e(url('/home')); ?>">
                     <?php echo e(config('app.name', 'Laravel')); ?>
 
                 </a>
@@ -31,15 +31,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                                    <a class="nav-link" href=""><?php echo e(__('Каталог')); ?></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href=""><?php echo e(__('О нас')); ?></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href=""><?php echo e(__('Каталог')); ?></a>
-                                </li>
+                    <li class="nav-item"><a class="nav-link" href="">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/public/aboutus">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/public/wheretofind">Где нас найти</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -54,7 +48,7 @@
 
                             <?php if(Route::has('register')): ?>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="<?php echo e(route('register')); ?>"><?php echo e(__('Register')); ?></a>
+                                    <a class="nav-link" href="<?php echo e(route('register')); ?>"><?php echo e(__('Регистрация')); ?></a>
                                 </li>
                             <?php endif; ?>
                         <?php else: ?>
