@@ -15,12 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('main');
 
 Auth::routes();
 
-Route::get('/home', function () {return view('home');});
+Route::get('/home', function () {return view('home');})->name('home');
 
-Route::get('/wheretofind', function () {return view('wheretofind');});
+Route::get('/wheretofind', function () {return view('wheretofind');})->name('wheretofind');
 
-Route::get('/aboutus', function () {return view('aboutus');});
+Route::get('/catalog', '\App\Http\Controllers\BaseController@products')->name('catalog');
+
+Route::get('/aboutus', '\App\Http\Controllers\BaseController@slider')->name('aboutus');

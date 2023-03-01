@@ -8,7 +8,7 @@
         <p>+79991238627</p>
         <p>TryGames@mail.ru</p>
 
-        <button class="submit"><a href="/public/home">Вернуться на главную</a></button>
+        <button class="submit"><a href="<?php echo e(route('home')); ?>">Вернуться на главную</a></button>
     </section>
 <?php $__env->stopSection(); ?>
 

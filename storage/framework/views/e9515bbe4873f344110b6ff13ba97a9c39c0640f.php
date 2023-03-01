@@ -15,7 +15,7 @@
 
     <!-- Scripts -->
     <?php echo app('Illuminate\Foundation\Vite')(['resources/sass/app.scss', 'resources/js/app.js']); ?>
-    <link rel="stylesheet" href="<?php echo e(asset('css/home.css')); ?>">
+    <link rel="stylesheet" href="/public/css/home.css">
 </head>
 <body>
     <div id="app">
@@ -31,9 +31,9 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="">Каталог</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/public/aboutus">О нас</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/public/wheretofind">Где нас найти</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo e(route('catalog')); ?>">Каталог</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo e(route('aboutus')); ?>">О нас</a></li>
+                    <li class="nav-item"><a class="nav-link" href="<?php echo e(route('wheretofind')); ?>">Где нас найти</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
