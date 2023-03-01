@@ -1,0 +1,29 @@
+.cards-item
+{
+    width: 95%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-left: 2%;
+
+
+}
+
+.card-item {
+    width: 30%;
+    padding-bottom: 20px;
+    margin-left: 1%;
+    background-color: white;
+    padding: 2%;
+    border-radius: 5px;
+    box-shadow: 3px 3px 10px;
+
+}
+
+.carusel-item > img{
+    width: 50% !important;
+    margin-left: 25%;
+    height: 450px;
+
+}
