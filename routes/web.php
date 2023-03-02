@@ -26,3 +26,5 @@ Route::get('/wheretofind', function () {return view('wheretofind');})->name('whe
 Route::get('/catalog', '\App\Http\Controllers\BaseController@products')->name('catalog');
 
 Route::get('/aboutus', '\App\Http\Controllers\BaseController@slider')->name('aboutus');
+
+Route::get('/catalog/{id}', [\App\Http\Controllers\BaseController::class,'singlproduct']);

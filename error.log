@@ -1,0 +1,10 @@
+[Thu Mar 02 00:00:31.648390 2023] [mpm_itk:warn] [pid 18841] (13)Permission denied: [client 192.168.2.150:63524] Couldn't read /srv/users/dbcsbhcc/vvfjnzd-m1/.htaccess, closing connection., referer: http://wsr.ru/
+[Thu Mar 02 00:00:31.649467 2023] [mpm_itk:warn] [pid 18834] (13)Permission denied: [client 192.168.2.150:63518] Couldn't read /srv/users/dbcsbhcc/vvfjnzd-m1/.htaccess, closing connection., referer: http://wsr.ru/
+[Thu Mar 02 00:00:31.650452 2023] [mpm_itk:warn] [pid 18849] (13)Permission denied: [client 192.168.2.150:63525] Couldn't read /srv/users/dbcsbhcc/vvfjnzd-m1/.htaccess, closing connection., referer: http://wsr.ru/
+[Thu Mar 02 00:00:31.652342 2023] [mpm_itk:warn] [pid 18838] (13)Permission denied: [client 192.168.2.150:63522] Couldn't read /srv/users/dbcsbhcc/vvfjnzd-m1/.htaccess, closing connection., referer: http://wsr.ru/
+[Thu Mar 02 00:00:31.653955 2023] [mpm_itk:warn] [pid 18839] (13)Permission denied: [client 192.168.2.150:63523] Couldn't read /srv/users/dbcsbhcc/vvfjnzd-m1/.htaccess, closing connection., referer: http://wsr.ru/
+[Thu Mar 02 00:00:31.655197 2023] [mpm_itk:warn] [pid 18836] (13)Permission denied: [client 192.168.2.150:63520] Couldn't read /srv/users/dbcsbhcc/vvfjnzd-m1/.htaccess, closing connection., referer: http://wsr.ru/
+[Thu Mar 02 00:00:31.657707 2023] [mpm_itk:warn] [pid 18835] (13)Permission denied: [client 192.168.2.150:63519] Couldn't read /srv/users/dbcsbhcc/vvfjnzd-m1/.htaccess, closing connection., referer: http://wsr.ru/
+[Thu Mar 02 00:00:31.660358 2023] [mpm_itk:warn] [pid 18850] (13)Permission denied: [client 192.168.2.150:63526] Couldn't read /srv/users/dbcsbhcc/vvfjnzd-m1/.htaccess, closing connection., referer: http://wsr.ru/
+[Thu Mar 02 00:00:31.663641 2023] [mpm_itk:warn] [pid 18837] (13)Permission denied: [client 192.168.2.150:63521] Couldn't read /srv/users/dbcsbhcc/vvfjnzd-m1/.htaccess, closing connection., referer: http://wsr.ru/
+[Thu Mar 02 02:39:34.075862 2023] [mpm_itk:warn] [pid 317] (13)Permission denied: [client 192.168.2.150:53589] Couldn't read /srv/users/dbcsbhcc/vvfjnzd-m1/public/catalog, closing connection., referer: http://vvfjnzd-m1.wsr.ru/public/home
