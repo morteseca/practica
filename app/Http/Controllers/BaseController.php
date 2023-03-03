@@ -8,12 +8,12 @@ use App\Models\Product;
 class BaseController extends Controller
 {
     public function products($id = "id", $sort = "desc") {
-       $a =Product::orderby($id, $sort) ->get(); $a =="0";
+       $a = Product::orderby($id, $sort) ->get(); $a =="0";
        return view('catalog',['a' => $a]);
         }
 
     public function slider($id = "id", $sort = "desc") {
-        $a =Product::orderby($id,$sort) -> limit(5) ->get();
+        $a = Product::orderby($id,$sort) -> limit(5) ->get();
         return view('aboutus',['a' => $a]);
         }
     public function singlproduct($id) {

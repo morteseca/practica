@@ -28,3 +28,11 @@ Route::get('/catalog', '\App\Http\Controllers\BaseController@products')->name('c
 Route::get('/aboutus', '\App\Http\Controllers\BaseController@slider')->name('aboutus');
 
 Route::get('/catalog/{id}', [\App\Http\Controllers\BaseController::class,'singlproduct']);
+
+Route::get('/catalog/{add?}',[App\Http\Controllers\Controller\Group::class,'Groups'])->name('catalog');
+
+Route::get('/test',[Product::class,"bascets"])->name('test');
+
+Route::get('/test/{id}',[Product::class,"products"]);
+
+
