@@ -2,10 +2,11 @@
 
 @section('content')
 <body>
+    <h1>Корзина</h1>
         <div class="cards-item">
             @foreach ($p as $j)
                 <div class="card-item">
-                    <img src="{{ $b->img}}" class="card-img-top" alt="#">
+                    <img src="{{ $j->products->img}}" class="card-img-top" alt="#">
                     <div class="card-body">
                     <h5 class="card-title">{{ $j->products->name }}</h5>
                     <h5 class="card-title">{{ $j->products->price }} rub</h5>

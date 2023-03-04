@@ -11,6 +11,7 @@
                     <h5 class="card-title">{{ $b->price }} rub</h5>
                     <p class="card-text">{{ $b->model }}</p>
                     <a href="/public/catalog/{{ $b -> id }}" class="btn btn-primary">Подробнее</a>
+                    <a href="/public/bascet/{{ $b -> id }}" class="btn btn-primary">В корзину</a>
                     </div>
                 </div>
             @endforeach

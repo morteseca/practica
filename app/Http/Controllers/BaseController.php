@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Models\Product;
+use App\Http\Controllers\BaseController;
+
 class BaseController extends Controller
 {
     public function products($id = "id", $sort = "desc") {

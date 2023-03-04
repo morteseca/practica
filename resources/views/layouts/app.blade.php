@@ -33,7 +33,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ route('catalog') }}">Каталог</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('aboutus') }}">О нас</a></li>
                     <li class="nav-item"><a class="nav-link" href="{{ route('wheretofind') }}">Где нас найти</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ route('test') }}">Корзина</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('bascet') }}">Корзина</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

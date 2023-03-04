@@ -1,6 +1,9 @@
 <?php
 
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BascetController;
+use App\Http\Controllers\Controller\Group;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,10 +32,12 @@ Route::get('/aboutus', '\App\Http\Controllers\BaseController@slider')->name('abo
 
 Route::get('/catalog/{id}', [\App\Http\Controllers\BaseController::class,'singlproduct']);
 
-Route::get('/catalog/{add?}',[App\Http\Controllers\Controller\Group::class,'Groups'])->name('catalog');
+Route::get('/catalog/{add?}',[Group::class,'Groups'])->name('catalog');
 
-Route::get('/test',[Product::class,"bascets"])->name('test');
+Route::get('/bascet',[BascetController::class,'bascets'])->name('bascet');
 
-Route::get('/test/{id}',[Product::class,"products"]);
+Route::get('/bascet/{id}',[BascetController::class,'products']);
+
+Route::get('/bascet/{id?}/delete',[BascetController::class, 'deletebascet']);
 
 

@@ -8,8 +8,9 @@
                 <div class="card-body-deteil">
                 <h5 class="card-title-deteil">{{ $a->name }}</h5>
                 <h5 class="card-title-deteil">{{ $a->price }} rub</h5>
+                <p class="card-text-deteil">{{ $a->country }}</p>
                 <p class="card-text-deteil">{{ $a->model }}</p>
-                <a href="" class="btn btn-primary">В корзину </a>
+                <a href="{{ route ('bascet') }}" class="btn btn-primary">В корзину</a>
                 
                 </div>
             </div>

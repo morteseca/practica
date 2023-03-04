@@ -9,6 +9,7 @@
                     <h5 class="card-title"><?php echo e($b->price); ?> rub</h5>
                     <p class="card-text"><?php echo e($b->model); ?></p>
                     <a href="/public/catalog/<?php echo e($b -> id); ?>" class="btn btn-primary">Подробнее</a>
+                    <a href="/public/bascet/<?php echo e($b -> id); ?>" class="btn btn-primary">В корзину</a>
                     </div>
                 </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
