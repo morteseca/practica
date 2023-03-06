@@ -1,6 +1,7 @@
 <?php $__env->startSection('content'); ?>
     <div class="sliders"
-        <h1>Девиз компании</h1>
+        <h1>Когда производительность имеет значение</h1>
+        <p>
         <p>Новинки компании</p>
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">

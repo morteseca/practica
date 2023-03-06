@@ -62,4 +62,7 @@
 .card-item-deteil > img{
     width: 50% !important;
 }
-
+.bascet{
+    text-align: center;
+    font-size: 32px;
+}

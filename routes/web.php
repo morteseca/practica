@@ -32,7 +32,6 @@ Route::get('/aboutus', '\App\Http\Controllers\BaseController@slider')->name('abo
 
 Route::get('/catalog/{id}', [\App\Http\Controllers\BaseController::class,'singlproduct']);
 
-Route::get('/catalog/{add?}',[Group::class,'Groups'])->name('catalog');
 
 Route::get('/bascet',[BascetController::class,'bascets'])->name('bascet');
 
