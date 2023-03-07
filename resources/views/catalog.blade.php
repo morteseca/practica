@@ -2,6 +2,16 @@
 
 @section('content')
 <body>
+    <div>
+        <button class="btn btn-sekondary dropdown-toggle" type="button" id="dropdownMenuButton1">
+            <a class="dropdown-item" href="{{url('/catalog')}}">Категории</a>
+        </button>
+        <ul class="dropdown-menu"aria-labelledby>=dropdownMenuButton1</ul>
+        @foreach ($s as $q)
+        <li> <a class="dropdown-item" href="{{ url('/catalog/filter') }}/{{ $s->name }}"</a></li>
+        @endforeach
+
+    </div>
         <div class="cards-item">
             @foreach ($a as $b)
                 <div class="card-item">

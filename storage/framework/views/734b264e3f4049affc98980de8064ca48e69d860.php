@@ -29,6 +29,7 @@
               <span class="visually-hidden">Next</span>
             </button>
           </div>
+          <img src="/public/img/logoo.png" alt="">
         </div>
     </div>
 <?php $__env->stopSection(); ?>
