@@ -1,14 +1,24 @@
 <?php $__env->startSection('content'); ?>
 <body>
     <div>
-        <button class="btn btn-sekondary dropdown-toggle" type="button" id="dropdownMenuButton1">
-            <a class="dropdown-item" href="<?php echo e(url('/catalog')); ?>">Категории</a>
-        </button>
-        <ul class="dropdown-menu"aria-labelledby>=dropdownMenuButton1</ul>
-        <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $b): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-        <li> <a class="dropdown-item" href="<?php echo e(url('/catalog/filter')); ?>/<?php echo e($a->name); ?>"</a></li>
-        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
- 
+            <div class="catalog_sort">
+                <p>Сортировка:</p>
+                <div class="sort_">
+                    По году:
+                    <a class="btn btn-primary" href="<?php echo e(url('/catalog/sort/year/asc')); ?>">По возрастанию</a>
+                    <a class="btn btn-primary" href="<?php echo e(url('/catalog/sort/year/desc')); ?>">По убыванию</a>
+                </div>
+                <div class="sort_">
+                    По наименованию:
+                    <a class="btn btn-primary" href="<?php echo e(url('/catalog/sort/name/asc')); ?>">По возрастанию</a>
+                    <a class="btn btn-primary" href="<?php echo e(url('/catalog/sort/name/desc')); ?>">По убыванию</a>
+                </div>
+                <div class="sort_">
+                    По цене:
+                    <a class="btn btn-primary" href="<?php echo e(url('/catalog/sort/price/asc')); ?>">По возрастанию</a>
+                    <a class="btn btn-primary"  href="<?php echo e(url('/catalog/sort/price/desc')); ?>">По убыванию</a>
+                </div>
+            </div>
     </div>
         <div class="cards-item">
             <?php $__currentLoopData = $a; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $b): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>

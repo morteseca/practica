@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
-use App\Models\product\sorting;
+use App\Models\sorting;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\BaseController;
 
@@ -25,10 +25,10 @@ class BaseController extends Controller
         $a = Product::find($id);
         return view('catalogdetailed',['a' => $a]);
     }
-    public function sorting($id){
-        $a=Product::where('category','$id')->get();
-        $s=sorting::all();
-        return view('catalog',['a'=>$a,'s'=>$s]);
+    public function sortItem($tip,$sort){
+        $a = product::orderBy($tip,$sort)-> get();
+        return view('catalog',['a' => $a]);
     }
+
 
 }

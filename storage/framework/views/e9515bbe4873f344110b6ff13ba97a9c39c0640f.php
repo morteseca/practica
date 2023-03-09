@@ -15,13 +15,13 @@
 
     <!-- Scripts -->
     <?php echo app('Illuminate\Foundation\Vite')(['resources/sass/app.scss', 'resources/js/app.js']); ?>
-    <link rel="stylesheet" href="/resources/css/app.css?25">
+    <link rel="stylesheet" href="/resources/css/app.css?26">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="<?php echo e(url('/home')); ?>">
+                <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
                     <img src="/public/img/logoo.png" alt="*">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="<?php echo e(__('Toggle navigation')); ?>">

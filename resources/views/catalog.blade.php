@@ -3,14 +3,24 @@
 @section('content')
 <body>
     <div>
-        <button class="btn btn-sekondary dropdown-toggle" type="button" id="dropdownMenuButton1">
-            <a class="dropdown-item" href="{{url('/catalog')}}">Категории</a>
-        </button>
-        <ul class="dropdown-menu"aria-labelledby>=dropdownMenuButton1</ul>
-        @foreach ($s as $q)
-        <li> <a class="dropdown-item" href="{{ url('/catalog/filter') }}/{{ $s->name }}"</a></li>
-        @endforeach
-
+            <div class="catalog_sort">
+                <p>Сортировка:</p>
+                <div class="sort_">
+                    По году:
+                    <a class="btn btn-primary" href="{{ url('/catalog/sort/year/asc') }}">По возрастанию</a>
+                    <a class="btn btn-primary" href="{{ url('/catalog/sort/year/desc') }}">По убыванию</a>
+                </div>
+                <div class="sort_">
+                    По наименованию:
+                    <a class="btn btn-primary" href="{{ url('/catalog/sort/name/asc') }}">По возрастанию</a>
+                    <a class="btn btn-primary" href="{{ url('/catalog/sort/name/desc') }}">По убыванию</a>
+                </div>
+                <div class="sort_">
+                    По цене:
+                    <a class="btn btn-primary" href="{{ url('/catalog/sort/price/asc') }}">По возрастанию</a>
+                    <a class="btn btn-primary"  href="{{ url('/catalog/sort/price/desc') }}">По убыванию</a>
+                </div>
+            </div>
     </div>
         <div class="cards-item">
             @foreach ($a as $b)

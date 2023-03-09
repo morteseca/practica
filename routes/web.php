@@ -18,16 +18,14 @@ use App\Http\Controllers\Controller\Group;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('aboutus');
 })->name('main');
 
 Auth::routes();
 
-Route::get('/home', function () {return view('home');})->name('home');
-
 Route::get('/wheretofind', function () {return view('wheretofind');})->name('wheretofind');
 
-Route::get('/aboutus', '\App\Http\Controllers\BaseController@slider')->name('aboutus');
+Route::get('/', '\App\Http\Controllers\BaseController@slider')->name('aboutus');
 
 Route::get('/catalog', '\App\Http\Controllers\BaseController@products')->name('catalog');
 
@@ -40,6 +38,8 @@ Route::get('/catalog/{id}', [\App\Http\Controllers\BaseController::class,'singlp
 Route::get('/bascet',[BascetController::class,'bascets'])->name('bascet');
 
 Route::get('/bascet/{id}',[BascetController::class,'products']);
+
+Route::get('/catalog/sort/{tip?}/{sort?}',[\App\Http\Controllers\BaseController::class, 'sortItem']);
 
 Route::get('/bascet/{id?}/delete',[BascetController::class, 'deletebascet']);
 
