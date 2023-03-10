@@ -24,6 +24,9 @@ class LoginController extends Controller
     {
         return 'login';
     }
+    public function redirectTo(){
+        return '/admin';
+    }
     /**
      * Where to redirect users after login.
      *

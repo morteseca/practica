@@ -28,4 +28,26 @@ class BascetController extends Controller
         Bascet::find($id)->delete();
         return redirect()->route('bascet');
     }
+    public function store(Request $req){
+        $k=$req->file('img');
+
+        $filename=$k->move(public_path('img'), $k->getClientOriginalName());
+        BascetController::create([
+            'name'=>$req->input('name'),
+            'img'=>'/public/img/'.$k->getClientOriginalName(),
+            'price'=>$req->input('price'),
+            'country'=>$req->input('country'),
+            'year'=>$req->input('year'),
+            'model'=>$req->input('model'),
+            'category'=>$req->input('category'),
+        ]);
+        return view('admin');
+    }
+    public function addstore(){
+        if( Auth::user()->name == "admin"){
+            return view('admin');
+        } else{
+            return redirect()->route('aboutus');
+        }
+    }
 }

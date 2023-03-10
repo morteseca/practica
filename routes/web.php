@@ -43,3 +43,6 @@ Route::get('/catalog/sort/{tip?}/{sort?}',[\App\Http\Controllers\BaseController:
 
 Route::get('/bascet/{id?}/delete',[BascetController::class, 'deletebascet']);
 
+Route::get('/admin', [BascetController::class, 'addstore']);
+
+Route::post('/products', [\App\Http\Controllers\BascetController::class, 'store'])->name('add-form');

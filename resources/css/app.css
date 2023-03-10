@@ -9,13 +9,6 @@
 
 
 }
-.sliders{
-    width: 100%;
-    text-align: center;
-    align-items: center;
-    font-size: 30px;
-
-}
 .card-item {
     width: 30%;
     padding-bottom: 20px;
@@ -24,6 +17,13 @@
     padding: 2%;
     border-radius: 5px;
     box-shadow: 3px 3px 10px;
+
+}
+.sliders{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    font-size: 30px;
 
 }
 .carousel-item{
