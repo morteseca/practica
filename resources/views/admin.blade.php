@@ -1,8 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="forn-admin">
 <div class="form">
-<form class="form-horizontal" role="form" method="POST" action="{{route ('add-form') }}">
+<form class="form-horizontal" role="form" method="POST" action="{{route ('add-form') }}" enctype="multipart/form-data">
     @csrf
   <div class="form-group">
     <div class="form-group">
@@ -12,9 +13,9 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="file" class="col-sm-2 control-label">IMG</label>
+    <label for="img`" class="col-sm-2 control-label">Изображение</label>
     <div class="col-sm-10">
-      <input type="file" class="form-control" name="file">
+      <input type="file" class="form-control" name="img">
     </div>
   </div>
 
@@ -59,4 +60,5 @@
   </div>
 </form>
 </div>
+
 @endsection

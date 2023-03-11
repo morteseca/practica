@@ -15,7 +15,7 @@
 
     <!-- Scripts -->
     <?php echo app('Illuminate\Foundation\Vite')(['resources/sass/app.scss', 'resources/js/app.js']); ?>
-    <link rel="stylesheet" href="/resources/css/app.css?26">
+    <link rel="stylesheet" href="/resources/css/app.css?27">
 </head>
 <body>
     <div id="app">
@@ -34,6 +34,11 @@
                     <li class="nav-item"><a class="nav-link" href="<?php echo e(route('aboutus')); ?>">О нас</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo e(route('wheretofind')); ?>">Где нас найти</a></li>
                     <li class="nav-item"><a class="nav-link" href="<?php echo e(route('bascet')); ?>">Корзина</a></li>
+                    <?php if(Route::has('addstore')): ?>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="<?php echo e(route('addstore')); ?>"><?php echo e(__('Админ')); ?></a>
+                                </li>
+                            <?php endif; ?>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

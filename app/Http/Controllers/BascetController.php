@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bascet;
+use App\Models\Product as pr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\BascetController;
+
 
 class BascetController extends Controller
 {
@@ -32,7 +34,7 @@ class BascetController extends Controller
         $k=$req->file('img');
 
         $filename=$k->move(public_path('img'), $k->getClientOriginalName());
-        BascetController::create([
+        pr::create([
             'name'=>$req->input('name'),
             'img'=>'/public/img/'.$k->getClientOriginalName(),
             'price'=>$req->input('price'),

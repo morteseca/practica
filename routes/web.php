@@ -6,17 +6,6 @@ use App\Http\Controllers\BaseController;
 use App\Http\Controllers\BascetController;
 use App\Http\Controllers\Controller\Group;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-
 Route::get('/', function () {
     return view('aboutus');
 })->name('main');
@@ -43,6 +32,6 @@ Route::get('/catalog/sort/{tip?}/{sort?}',[\App\Http\Controllers\BaseController:
 
 Route::get('/bascet/{id?}/delete',[BascetController::class, 'deletebascet']);
 
-Route::get('/admin', [BascetController::class, 'addstore']);
+Route::get('/admin', [\App\Http\Controllers\BascetController::class, 'addstore'])->name('addstore');
 
 Route::post('/products', [\App\Http\Controllers\BascetController::class, 'store'])->name('add-form');
