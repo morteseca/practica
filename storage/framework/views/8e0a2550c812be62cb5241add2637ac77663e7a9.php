@@ -5,18 +5,18 @@
                 <p>Сортировка:</p>
                 <div class="sort_">
                     По году:
-                    <a class="btn btn-primary" href="<?php echo e(url('/catalog/sort/year/asc')); ?>">По возрастанию</a>
-                    <a class="btn btn-primary" href="<?php echo e(url('/catalog/sort/year/desc')); ?>">По убыванию</a>
+                    <a class="btn btn-dark" href="<?php echo e(url('/catalog/sort/year/asc')); ?>">По возрастанию</a>
+                    <a class="btn btn-dark" href="<?php echo e(url('/catalog/sort/year/desc')); ?>">По убыванию</a>
                 </div>
                 <div class="sort_">
                     По наименованию:
-                    <a class="btn btn-primary" href="<?php echo e(url('/catalog/sort/name/asc')); ?>">По возрастанию</a>
-                    <a class="btn btn-primary" href="<?php echo e(url('/catalog/sort/name/desc')); ?>">По убыванию</a>
+                    <a class="btn btn-dark" href="<?php echo e(url('/catalog/sort/name/asc')); ?>">По возрастанию</a>
+                    <a class="btn btn-dark" href="<?php echo e(url('/catalog/sort/name/desc')); ?>">По убыванию</a>
                 </div>
                 <div class="sort_">
                     По цене:
-                    <a class="btn btn-primary" href="<?php echo e(url('/catalog/sort/price/asc')); ?>">По возрастанию</a>
-                    <a class="btn btn-primary"  href="<?php echo e(url('/catalog/sort/price/desc')); ?>">По убыванию</a>
+                    <a class="btn btn-dark" href="<?php echo e(url('/catalog/sort/price/asc')); ?>">По возрастанию</a>
+                    <a class="btn btn-dark"  href="<?php echo e(url('/catalog/sort/price/desc')); ?>">По убыванию</a>
                 </div>
             </div>
     </div>
@@ -31,8 +31,8 @@
                     <p>
                     <p class="card-text">Описание:<?php echo e($b->model); ?></p>
                     <p>
-                    <a href="/public/catalog/<?php echo e($b -> id); ?>" class="btn btn-primary">Подробнее</a>
-                    <a href="/public/bascet/<?php echo e($b -> id); ?>" class="btn btn-primary">В корзину</a>
+                    <a href="/public/catalog/<?php echo e($b -> id); ?>" class="btn btn-success">Подробнее</a>
+                    <a href="/public/bascet/<?php echo e($b -> id); ?>" class="btn btn-success">В корзину</a>
                     </div>
                 </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

@@ -16,7 +16,7 @@
                 <p>
                 <p class="card-text-deteil">Год выпуска:{{ $a->year }}</p>
                 <p>
-                <a href="{{ route ('bascet') }}" class="btn btn-primary">В корзину</a>
+                <a href="{{ route ('bascet') }}" class="btn btn-success">В корзину</a>
                 
                 </div>
             </div>
