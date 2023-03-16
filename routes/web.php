@@ -35,3 +35,6 @@ Route::get('/bascet/{id?}/delete',[BascetController::class, 'deletebascet']);
 Route::get('/admin', [\App\Http\Controllers\BascetController::class, 'addstore'])->name('addstore');
 
 Route::post('/products', [\App\Http\Controllers\BascetController::class, 'store'])->name('add-form');
+
+Route::post('cart/update/{id}',[BascetController::class,'update'])->name('cartUpadate');
+

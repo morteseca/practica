@@ -17,14 +17,44 @@ class BascetController extends Controller
         Auth::user()->id;
         return view("bascet",compact('p'));
     }
-
     public function products($id){
-        $test=Bascet::create([
+        $p = Bascet::where('product_id','=', $id)
+        ->where('user_id','=',Auth::user()->id)
+        ->count();
+        if ($p == 0){
+            echo "товара нету";
+            Bascet::create([
             'user_id'=> Auth::user()->id,
             'product_id'=>$id,
             'quantity'=>1,
         ]);
-        return redirect('/catalog');
+        }
+
+            else{
+                $p = Bascet::where('product_id','=', $id)
+                ->where('user_id','=',Auth::user()->id)
+                ->first();
+                $p->quantity++;
+                $g=Bascet::find($p->id);
+                $p->save();
+            }
+            
+        return redirect('/bascet');
+    }
+    public function update(Request $request, $id)
+    {
+        $cart_item = Bascet::where('id', $id)
+            ->where('user_id', Auth::user()->id)
+            ->firstOrFail();
+
+        if ($request->input('quantity') > 0) {
+            $cart_item->quantity = $request->input('quantity');
+            $cart_item->save();
+        } else {
+            $cart_item->delete();
+        }
+
+        return redirect('/bascet');
     }
     public function deletebascet($id){
         Bascet::find($id)->delete();
